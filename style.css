@@ -1,0 +1,15 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: white;
+  background-color: #fff;
+  background-size: cover;
+}
+
+#grid {
+  width: 500px;
+  height: 500px;
+  display: grid;
+}
