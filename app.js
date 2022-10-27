@@ -5,9 +5,12 @@ const colorPicker = document.getElementById("colorPicker");
 const rainbowBtn = document.getElementById("rainbowBtn");
 const eraserBtn = document.getElementById("eraserBtn");
 const clearBtn = document.getElementById("clearBtn");
-const sizeValue = document.getElementById("sizeValue");
-const sizeSlider = document.getElementById("sizeSlider");
-const grid = document.getElementById("grid");
+let sizeValue = document.getElementById("sizeValue");
+let sizeSlider = document.getElementById("sizeSlider");
+
+const grid = document.getElementById("grid")
+const gridSizeText = document.querySelector('#GridSizeText')
+const GridSizer = document.querySelector('#GridSize')
 
 // Create Grid function
 function createGrid(size) {
@@ -31,6 +34,12 @@ createGrid(16);
 function changeSize(sizeSlider) {
   createGrid(sizeSlider);
 }
+
+// Change Grid Size Text
+sizeSlider.onmousemove = e=>{
+  squares = e.target.value
+  sizeValue.textContent = `${squares} x ${squares}`
+};
 
 // Color Square
 function colorSquare() {
